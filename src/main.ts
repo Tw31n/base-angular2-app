@@ -1,6 +1,4 @@
-document.onreadystatechange = () => {
-    let nodeList: NodeListOf<Element> = document.getElementsByTagName('body');
-    let bodyNode: Element = nodeList.item(0);
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-    bodyNode.innerHTML = 'Angular 2 app';
-}
+platformBrowserDynamic().bootstrapModule(AppModule);

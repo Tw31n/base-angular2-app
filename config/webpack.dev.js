@@ -1,10 +1,17 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: "./src/main.ts",
+    entry: {
+        bundle: "./src/main.ts",
+        vendor: [
+            "./node_modules/core-js/client/shim.min.js",
+            "./node_modules/zone.js/dist/zone.min.js",
+            "./node_modules/reflect-metadata/Reflect.js"
+        ]
+    },
     output: {
         path: "./dist",
-        filename: "bundle.js"
+        filename: "[name].js"
     },
     resolve: {
         extensions: ['', '.js', '.ts']
@@ -16,8 +23,7 @@ module.exports = {
                 loaders: ['ts-loader']
             }
         ]
-    }
-    ,
+    },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
             compress: { warnings: false }

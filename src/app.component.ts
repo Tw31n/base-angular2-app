@@ -15,4 +15,8 @@ export class AppComponent {
     ];
 
     selectedHero = this.heroes[0];
+
+    selectHero(hero: Hero): void {
+        this.selectedHero = hero;
+    }
 }

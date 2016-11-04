@@ -20,9 +20,16 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts$/,
-                loaders: ['ts-loader']
+                loaders: ['ts-loader', 'angular2-template-loader']
+            },
+            {
+                test: /\.html$/,
+                loader: 'html'
             }
         ]
+    },
+    htmlLoader: {
+        caseSensitive: true
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({

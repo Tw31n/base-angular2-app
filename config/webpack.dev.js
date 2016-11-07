@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        bundle: "./src/main.ts",
+        bundle: "./main.ts",
         vendor: [
             "./node_modules/core-js/client/shim.min.js",
             "./node_modules/zone.js/dist/zone.min.js",

@@ -1,4 +1,4 @@
-<h1>The best hero is {{selectedHero.name}}!</h1>
+<h1 *ngIf="selectedHero">The best hero is {{selectedHero.name}}!</h1>
 <ul>
     <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
         {{hero.name}}
